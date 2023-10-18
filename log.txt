@@ -52,3 +52,5 @@
 
 Сервер запущен!
 Сервер остановлен!
+Ivan Ivanovich: Привет!
+Ivan Ivanovich: Hi!
