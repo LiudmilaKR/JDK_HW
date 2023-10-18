@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server {
-    ServerWindow serverWindow;
+    ServerGUI serverGUI;
     Repo fileRepo;
     List<Client> clientList;
     boolean work;
 
-    public Server(ServerWindow serverWindow) {
-        this.serverWindow = serverWindow;
+    public Server(ServerGUI serverGUI) {
+        this.serverGUI = serverGUI;
         clientList = new ArrayList<>();
         fileRepo = new RepoFile();
     }
@@ -27,8 +27,8 @@ public class Server {
 
     public void stopWorking() {
         work = false;
-        for (Client client: clientList){
-            disconnectUser(client);
+        for (int i = clientList.size() - 1; i >= 0; i--) {
+            disconnectUser(clientList.get(i));
         }
     }
 
@@ -42,7 +42,6 @@ public class Server {
 
 
     public String getHistory() {
-//        return readLog();
         return fileRepo.readLog();
     }
 
@@ -57,10 +56,8 @@ public class Server {
         if (!work){
             return;
         }
-        serverWindow.appendLog(text);
-//        appendLog(text);
+        serverGUI.appendLog(text);
         answerAll(text);
-//        saveInLog(text);
         fileRepo.saveInLog(text);
     }
 
@@ -69,7 +66,4 @@ public class Server {
             client.printText(text);
         }
     }
-
-
-
 }

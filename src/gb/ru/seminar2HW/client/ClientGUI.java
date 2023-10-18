@@ -1,7 +1,6 @@
 package gb.ru.seminar2HW.client;
 
-import gb.ru.seminar2HW.server.Server;
-import gb.ru.seminar2HW.server.ServerWindow;
+import gb.ru.seminar2HW.server.ServerGUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +18,7 @@ public class ClientGUI extends JFrame implements ClientView {
     // клиенту сообщаем, что происходит
     private Client client;
 
-    public ClientGUI(ServerWindow server){
+    public ClientGUI(ServerGUI server){
         this.client = new Client(this, server.getServer());
 
         setSize(WIDTH, HEIGHT);
@@ -31,6 +30,7 @@ public class ClientGUI extends JFrame implements ClientView {
 
         setVisible(true);
     }
+
     // метод срабатывает при нажатии на кнопку
     private void connectToServer() {
         if (client.connectToServer(tfLogin.getText())){

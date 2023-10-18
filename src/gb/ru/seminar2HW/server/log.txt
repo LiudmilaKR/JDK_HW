@@ -4,3 +4,8 @@ Ivan Ivanovich: Привет!
 Ivan Ivan: И тебе - привет!
 Ivan Ivanovich: Как жизнь?
 Ivan Ivan: Норм!
+Ivan Ivan: Что нового у тебя?
+Ivan Ivanovich: test
+Ivan Ivan: ?
+Ivan Ivanovich: Отлично!
+Ivan Ivanovich: Очень хорошо :)

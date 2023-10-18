@@ -64,6 +64,7 @@ public class Client {
     public String getName() {
         return name;
     }
+
     // обращение к view для отображения текста
     public void printText(String text) {
         clientView.showMessage(text);
