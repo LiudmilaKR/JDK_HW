@@ -23,6 +23,7 @@ public class Pair<T1, T2> {
 
     @Override
     public String toString() {
+//        можно использовать не getFirst(), а x
         return "(x, y) = (" + getFirst() + ", " + getSecond() + ")\nкласс x => " + x.getClass() +
                 "\nкласс y => " + y.getClass();
     }

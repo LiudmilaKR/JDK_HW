@@ -10,6 +10,7 @@ public class Calculator {
 //    Делаю без проверки Integer.MAX_VALUE, и так получилось очень громоздко...:)
 
      public static <T1 extends Number, T2 extends Number> void sum(T1 a, T2 b) {
+//         решение преподавателя - использование num1.doubleValue() and num2.doubleValue()
         if (a instanceof Integer) {
             if (b instanceof Integer) System.out.printf("%d + %d = %d\n", a, b, a.intValue() + b.intValue());
             else if (b instanceof Float) System.out.printf("%d + %f = %f\n", a, b, a.intValue() + b.floatValue());
@@ -78,5 +79,9 @@ public class Calculator {
          } catch (ArithmeticException e) {
              System.out.println(a + " / " + b + " - ошибка " + e.getMessage() + "\nДеление на ноль запрещено!");
         }
+    }
+//    //         решение преподавателя
+    public static <T extends  Number> double sum1(T num1, T num2) {
+         return num1.doubleValue() + num2.doubleValue();
     }
 }

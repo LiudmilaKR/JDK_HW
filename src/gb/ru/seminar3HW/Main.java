@@ -51,4 +51,18 @@ public class Main {
     private static boolean compareArrays2(Object[] ar1, Object[] ar2) {
         return Arrays.equals(Arrays.stream(ar1).toArray(), Arrays.stream(ar2).toArray());
     }
+
+//    решение преподавателя
+    private static <T> boolean compareArrays3(T[] array1, T[] array2) {
+        if (array1.length != array2.length) {
+            return false;
+        }
+        for (int i = 0; i < array1.length; i++) {
+            if (!array1[i].equals(array2[i])) {
+//                нельзя пользоваться array1[i] == array2[i]), т.к. это равенство ссылок, а не значений
+                return false;
+            }
+        }
+        return true;
+    }
 }
