@@ -1,6 +1,4 @@
-package gb.ru.seminar4;
-
-import java.util.Collection;
+package gb.ru.seminar4HW;
 
 public class Employee {
     /*

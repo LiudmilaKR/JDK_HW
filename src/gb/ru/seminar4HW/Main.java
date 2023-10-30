@@ -1,6 +1,5 @@
-package gb.ru.seminar4;
+package gb.ru.seminar4HW;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {

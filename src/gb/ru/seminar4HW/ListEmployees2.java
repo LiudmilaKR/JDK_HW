@@ -1,7 +1,6 @@
-package gb.ru.seminar4;
+package gb.ru.seminar4HW;
 
 import java.util.*;
-import java.util.function.Consumer;
 
 public class ListEmployees2 {
     Map<Integer, Employee2> employeeList;
